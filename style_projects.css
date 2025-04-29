@@ -1,0 +1,203 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+	font-family: 'Lato';
+	background-color: #CCC ; /* url(dark.png) no-repeat; */
+	text-align:left;
+	float: left;
+	margin: 0;
+	width: 100%;
+}
+
+head {
+
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ************* Banner start *********** */
+
+* {box-sizing: border-box;}
+
+.avatar {
+	width:100%;
+	height:150px;
+	float: left;
+	filter: grayscale(70%);
+	opacity: 0.9;
+  	object-fit: cover;
+	position: sticky;
+	
+}
+
+.banner {
+	width: 100%;
+	height: 50px;
+	float: left;
+	position: sticky;
+	top: 0;
+	background-image: linear-gradient(silver, lightgray, silver);
+	z-index: 1000; /* Big number to stay on top */	
+}
+
+
+.nametag {
+	width:50%;
+	height: 50px;
+	float:left;
+	font-family: Lato;
+	color: blue;
+	background-image: linear-gradient(silver, lightgray, silver);
+	text-decoration: none; 
+	overflow:hidden;
+	
+}
+@media screen and (min-width: 1200px) {
+  div.nametag {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.nametag {
+    font-size: 2vw;
+  }
+}
+.options { 
+	width: 50%;
+	height: 50px;
+	float: left;
+	display: flex;
+	align-items: center;     /* Vertical center */
+   	justify-content: center; /* Horizontal center */
+	background-image: linear-gradient(silver, lightgray, silver);
+}
+
+.options a {
+	width: 20%;
+	height: 50px;
+	float: left;
+	font-family: Lato;
+	font-size: 20px;
+	display: flex;
+	align-items: center;     /* Vertical center */
+   	justify-content: center; /* Horizontal center */
+	color: black;
+	text-decoration: none; 
+
+}
+
+.options a:hover {
+	color: white;
+	background-color: #aaa;
+}
+	
+
+.options a.active { 
+	font-weight: bold;
+	color: white;
+	background-color: #ddd;
+}
+
+/* ************* Banner end *********** */
+
+
+
+.aristera { 
+	width: 20%;
+    height: 1600px;
+    float: left;
+	background-color: #808080;
+}
+
+.kentro { 
+	width: 60%;
+    height: 1600px;
+    float: left;
+	text-align: center;
+	background-color: #ddd;
+	z-index: 500;
+}
+
+
+.dexia {
+	width: 20%;
+    height:1600px;
+    float: left;
+	background-color: #808080;
+}
+
+
+.footer {	
+    width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;     /* Vertical center */
+   	justify-content: center; /* Horizontal center */
+	font-size: 12px;
+	background-color: #96024e;
+	margin-bottom: 20px;
+}
+
+
+
+
+.projects {
+	width: 100%;
+	float: left;
+	text-align:center;
+	text-decoration: none;
+	background-color: #CCC;
+}
+
+.projects img {
+	transition:1s;
+	width: 20%;
+	text-decoration: none;
+}
+.projects img:hover {
+	filter: grayscale(50%);
+	transform: scale(1.1);
+	z-index: 500;	
+	
+}
+
+.projects iframe {
+	float:center;
+	margin: auto;
+	text-decoration: none;
+}
+
+
+
+
+#youtube {
+	font-size: 20px;
+	text-align: center;
+	border: 2px solid green;
+	background-color: #800000;
+}
+
+#humour {
+	width: 100%;
+	font-size: 30px;
+	color: green;
+	background-color: #EEE;
+}
+
+
+.container {
+  width: 90%; 
+  background-color: #ddd; 
+}
+
+

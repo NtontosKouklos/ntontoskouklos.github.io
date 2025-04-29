@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html, charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+	<title> Theodoros Marinopoulos </title>
+	<link rel="stylesheet" type="text/css" href="style_skills.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<link rel="stylesheet" type="text/css" href="lightbox.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" >
+
+	<script>	</script>
+	
+</head>
+
+<body>
+	
+	<div> 
+		<img class="avatar"	src="logos/AM.jpg" alt="avatar"	title="cover photo">
+	</div>
+
+	<div class="banner">
+	
+		<div class="nametag"> 
+			 
+		</div>
+
+		<div class="options">
+			<a href="index.html" target="_self">  					 Home</a> 
+			<a href="projects.html" target="_self">  				 Projects</a> 
+			<a href="Publications.html" target="_self"> 	 		 Publications</a> 
+			<a class="active" href="skills.html" target="_self">     Skills</a> 
+			<a href="contact.html" target="_self">    				 Contact</a> 
+		</div>
+	</div>
+	
+
+ 
+	<!-- Main Body Container -->
+	<div class="row">
+		
+		<!-- Left Collum Width for Empty space -->
+		<div class="aristera">		</div> 
+
+		<!-- Main Centre space for content -->	
+		<div class="kentro">
+		
+
+
+			<div class="Slideshow" >
+				<h2 style="text-align:center">Projects Gallery</h2>
+
+				<div class="Slidescontainer">
+
+				  <div class="mySlides">
+					<div class="numbertext">1 / 5</div>
+					<img src="projects/socket nx.png" style="width:100%">
+				  </div>
+				  
+				  <div class="mySlides">
+					<div class="numbertext">2 / 5</div>
+					<img src="projects/socket nx2.png" style="width:100%">
+				  </div>
+
+				  <div class="mySlides">
+					<div class="numbertext">3 / 5</div>
+					<img src="projects/socket FEA.png" style="width:100%">
+				  </div>
+				  
+				  <div class="mySlides">
+					<div class="numbertext">4 / 5</div>
+					<img src="projects/test2.png" style="width:100%">
+				  </div>
+				  
+				  <div class="mySlides">
+					<div class="numbertext">5 / 5</div>
+					<img src="projects/paths.png" style="width:100%">
+				  </div>
+				
+				  <a class="prev" onclick="plusSlides(-1)">❮</a>
+				  <a class="next" onclick="plusSlides(1)">❯</a>
+
+				  <div class="caption-container">
+					<p id="caption"></p>
+				  </div>
+
+				  <div class="Slidesrow">
+					
+					<div class="column">
+					  <img class="demo cursor" src="projects/socket nx.png" style="width:100%" onclick="currentSlide(1)" alt="Prosthetic Socket Design Accomodating Attachment Mechanicsm">
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="projects/socket nx2.png" style="width:100%" onclick="currentSlide(2)" alt="Socket Design Iterations with Variable Wall Thickness for Improved Mechanical Performance">
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="projects/socket FEA.png" style="width:100%" onclick="currentSlide(3)" alt="Finite Element Mesh Development for Interaction Investigation Between Soft-tissue, Liner and Socket">
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="projects/test2.png" style="width:100%" onclick="currentSlide(4)" alt="Bespoke Mechanical Testing Rig According to ISO 10328:2016">
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="projects/paths.png" style="width:100%" onclick="currentSlide(5)" alt="Printing Optimisation Reducing the Number of Neighbouring Paths for FDM Process">
+					</div>
+					
+				  </div>
+				</div>
+
+			</div>
+		
+
+   
+		<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+				  let i;
+				  let slides = document.getElementsByClassName("mySlides");
+				  let dots = document.getElementsByClassName("demo");
+				  let captionText = document.getElementById("caption");
+				  if (n > slides.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				  }
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";
+				  dots[slideIndex-1].className += " active";
+				  captionText.innerHTML = dots[slideIndex-1].alt;
+				}
+		</script>
+		
+		</div>
+		
+		<!-- Left Collum Width for Empty space -->
+		<div class="dexia">		</div>
+	
+		<!-- End of Main body container -->
+
+	</div>	
+
+
+
+
+</body>	
+
+<footer class="footer"> 
+	
+		<p>	&#169 Theodoros Marinopoulos <br> Ntontoskouklos Productions  </p>
+	
+</footer>
+

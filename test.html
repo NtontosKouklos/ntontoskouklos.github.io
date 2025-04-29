@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="style1.css"/>
+</head>
+
+<body>
+
+<div class="Slideshow" >
+		<h2 style="text-align:center">Slideshow Gallery</h2>
+
+		<div class="Slidescontainer">
+		  <div class="mySlides">
+			<div class="numbertext">1 / 11</div>
+			<img src="mri.png" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			<div class="numbertext">2 / 11</div>
+			<img src="pv recycling.png" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			<div class="numbertext">3 / 11</div>
+			<img src="printing.png" style="width:100%">
+		  </div>
+			
+		  <div class="mySlides">
+			<div class="numbertext">4 / 11</div>
+			<img src="socket FEA3.png" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			<div class="numbertext">5 / 11</div>
+			<img src="socket FEA6.png" style="width:100%">
+		  </div>
+			
+		  <div class="mySlides">
+			<div class="numbertext">6 / 11</div>
+			<img src="micromachining.png" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			<div class="numbertext">7 / 11</div>
+			<img src="socket nx.png" style="width:100%">
+		  </div>
+		  
+		  <div class="mySlides">
+			<div class="numbertext">8 / 11</div>
+			<img src="socket nx2.png" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			<div class="numbertext">9 / 11</div>
+			<img src="socket FEA.png" style="width:100%">
+		  </div>
+		  
+		  <div class="mySlides">
+			<div class="numbertext">10 / 11</div>
+			<img src="test2.png" style="width:100%">
+		  </div>
+		  
+		  <div class="mySlides">
+			<div class="numbertext">11 / 11</div>
+			<img src="paths.png" style="width:100%">
+		  </div>
+
+
+
+
+
+
+			
+		
+		  <a class="prev" onclick="plusSlides(-1)">❮</a>
+		  <a class="next" onclick="plusSlides(1)">❯</a>
+
+		  <div class="caption-container">
+			<p id="caption"></p>
+		  </div>
+
+		  <div class="Slidesrow">
+			<div class="column">
+			  <img class="demo cursor" src="mri.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="pv recycling.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="printing.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="socket FEA3.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="socket FEA6.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+			</div>    
+			<div class="column">
+			  <img class="demo cursor" src="micromachining.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="socket nx.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="socket nx2.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="socket FEA.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="test2.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+			</div>
+			<div class="column">
+			  <img class="demo cursor" src="paths.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+			</div>
+			
+		  </div>
+		</div>
+
+   </div>
+   
+		<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+				  let i;
+				  let slides = document.getElementsByClassName("mySlides");
+				  let dots = document.getElementsByClassName("demo");
+				  let captionText = document.getElementById("caption");
+				  if (n > slides.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				  }
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block";
+				  dots[slideIndex-1].className += " active";
+				  captionText.innerHTML = dots[slideIndex-1].alt;
+				}
+		</script>
+		
+   
+</body>
+</html>
